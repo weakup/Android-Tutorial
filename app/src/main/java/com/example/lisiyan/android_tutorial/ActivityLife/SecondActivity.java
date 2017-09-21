@@ -1,8 +1,10 @@
-package com.example.lisiyan.android_tutorial;
+package com.example.lisiyan.android_tutorial.ActivityLife;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.example.lisiyan.android_tutorial.R;
 
 public class SecondActivity extends AppCompatActivity {
 
