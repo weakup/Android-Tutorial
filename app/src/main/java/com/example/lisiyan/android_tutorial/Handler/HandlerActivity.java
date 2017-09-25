@@ -21,7 +21,7 @@ public class HandlerActivity extends AppCompatActivity{
 
     private final NotifyHandler mHandler = new NotifyHandler(this);
 
-    private TextView mTextView;
+    public static TextView mTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class HandlerActivity extends AppCompatActivity{
         NotifyHandler(HandlerActivity handlerActivity){
 
             mActivityWeakReference = new WeakReference<HandlerActivity>(handlerActivity);
+
         }
 
         @Override

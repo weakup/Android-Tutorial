@@ -28,6 +28,7 @@ public class BaseActivity extends AppCompatActivity{
         super.onNewIntent(intent);
         Log.i("Lsy", "*****onNewIntent()方法*****");
         Log.i("Lsy", "onNewIntent：" + getClass().getSimpleName() + " TaskId: " + getTaskId() + " hasCode:" + this.hashCode());
+        setIntent(intent);
         dumpTaskAffiniity();
     }
 

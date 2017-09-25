@@ -3,6 +3,7 @@ package com.example.lisiyan.android_tutorial.ActivityStart;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,6 +22,7 @@ public class ActivitySingleTop extends BaseActivity{
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(),ActivitySingleTop.class);
+                intent.putExtra("Message","message");
                 startActivity(intent);
 
             }
@@ -33,5 +35,13 @@ public class ActivitySingleTop extends BaseActivity{
                 startActivity(intent);
             }
         });
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String s = getIntent().getStringExtra("Message")!=null?getIntent().getStringExtra("Message"):"no message";
+        Log.d("Message",s);
     }
 }
